@@ -1,20 +1,22 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
-    compatibilityDate: '2025-07-15',
-    devtools: {enabled: true},
-    modules: ["@nuxt/eslint",
+    compatibilityDate: "2025-07-15",
+    devtools: { enabled: true },
+    future: {
+        compatibilityVersion: 4,
+    },
+
+    modules: [
+        "@nuxt/eslint",
         "@nuxt/fonts",
         "@nuxt/image",
         "@pinia/nuxt",
         "@nuxtjs/tailwindcss",
         "@nuxtjs/color-mode",
         "nuxt-svg-sprite-icon",
-        "@vueuse/nuxt", "@sentry/nuxt/module"],
+        "@vueuse/nuxt",
+    ],
 
-    ssr: false,
-
-   css: ["~/assets/styles/main.css", "~/assets/styles/custom.css"],
+    css: ["~/assets/styles/main.css", "~/assets/styles/custom.css"],
 
     colorMode: {
         dataValue: "theme",
@@ -24,7 +26,9 @@ export default defineNuxtConfig({
         classSuffix: "",
     },
 
-pinia: {
+    ssr: false,
+
+    pinia: {
         storesDirs: ["./app/stores/**"],
     },
 
@@ -37,12 +41,10 @@ pinia: {
         input: "./app/assets/icons",
     },
 
-    runtimeConfig: {
-        public: {
-            sentry: {
-                dsn: process.env.SENTRY_DSN_PUBLIC,
-            }
-        }
+    srcDir: "app/",
+
+    devServer: {
+        port: 7000,
     },
 
     app: {
@@ -62,15 +64,6 @@ pinia: {
             standalone: false,
         },
     },
+});
 
-    sentry: {
-        sourceMapsUploadOptions: {
-            org: "alicompany-y3",
-            project: "javascript-nuxt",
-            authToken: process.env.SENTRY_AUTH_TOKEN,
-        }
-    },
-    sourcemap: {
-        client: "hidden",
-    }
-})
+// https://nuxt.com/docs/api/configuration/nuxt-config
