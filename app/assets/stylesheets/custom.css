@@ -1,0 +1,16 @@
+.base-button {
+    @apply bg-primary shadow-none text-white rounded-2xl hover:bg-darker-primary disabled:bg-primary disabled:opacity-70;
+}
+
+.base-button_dark {
+    @apply bg-black text-white shadow-none rounded-2xl hover:bg-hover-black disabled:bg-black disabled:text-white disabled:opacity-70;
+}
+
+.base-button_white {
+    @apply bg-white text-black rounded-2xl disabled:opacity-70 hover:bg-gray-1 border-gray-1 shadow-none;
+}
+
+.base-button_none {
+    @apply shadow-none outline-none bg-transparent text-black rounded-2xl hover:bg-gray-1/70 border-none !p-2 !min-h-8 disabled:opacity-70;
+}
+

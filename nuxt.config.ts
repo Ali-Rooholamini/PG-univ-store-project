@@ -1,15 +1,42 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: {enabled: true},
-    modules: ['@nuxt/eslint', '@nuxt/image', "nuxt-icons", "@vueuse/nuxt", "@pinia/nuxt", "@sentry/nuxt/module"],
+    modules: ["@nuxt/eslint",
+        "@nuxt/fonts",
+        "@nuxt/image",
+        "@pinia/nuxt",
+        "@nuxtjs/tailwindcss",
+        "@nuxtjs/color-mode",
+        "nuxt-svg-sprite-icon",
+        "@vueuse/nuxt", "@sentry/nuxt/module"],
+
     ssr: false,
-    vite: {
-        plugins: [tailwindcss()],
+
+   css: ["~/assets/styles/main.css", "~/assets/styles/custom.css"],
+
+    colorMode: {
+        dataValue: "theme",
+        storageKey: "nuxt-color-mode",
+        preference: "light",
+        fallback: "light",
+        classSuffix: "",
     },
-    css: ["~/assets/stylesheets/main.css"],
+
+pinia: {
+        storesDirs: ["./app/stores/**"],
+    },
+
+    image: {
+        format: ["webp"],
+        dir: "assets/images",
+    },
+
+    svgSprite: {
+        input: "./app/assets/icons",
+    },
+
     runtimeConfig: {
         public: {
             sentry: {
@@ -17,6 +44,25 @@ export default defineNuxtConfig({
             }
         }
     },
+
+    app: {
+        head: {
+            htmlAttrs: { dir: "rtl", lang: "fa" },
+        },
+    },
+
+    components: [
+        "~/components/global",
+        "~/components/common",
+        "~/components/template",
+    ],
+
+    eslint: {
+        config: {
+            standalone: false,
+        },
+    },
+
     sentry: {
         sourceMapsUploadOptions: {
             org: "alicompany-y3",

@@ -1,2 +1,81 @@
-@import "tailwindcss";
-@plugin "daisyui";
+@import "tailwindcss/preflight";
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 600;
+    src: url("~/assets/fonts/IRANYekanX-DemiBold.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanX-DemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: bold;
+    src: url("~/assets/fonts/IRANYekanX-Bold.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanX-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: normal;
+    src: url("~/assets/fonts/IRANYekanX-Regular.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanX-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanXFaNum;
+    font-style: normal;
+    font-weight: 600;
+    src: url("~/assets/fonts/IRANYekanXFaNum-DemiBold.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanXFaNum-DemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanXFaNum;
+    font-style: normal;
+    font-weight: bold;
+    src: url("~/assets/fonts/IRANYekanXFaNum-Bold.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanXFaNum-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: fallBack;
+    font-family: IRANYekanXFaNum;
+    font-style: normal;
+    font-weight: normal;
+    src: url("~/assets/fonts/IRANYekanXFaNum-Regular.woff") format("woff"),
+    url("~/assets/fonts/IRANYekanXFaNum-Regular.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: IRANYekanXFaNum;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+.en-num {
+    font-family: IRANYekanX;
+}
+
+.svg-icon {
+    @apply w-full h-full;
+}
