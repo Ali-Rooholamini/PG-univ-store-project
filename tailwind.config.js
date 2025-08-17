@@ -12,9 +12,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "black": "rgba(var(--black), <alpha-value>)",
+                black: "rgba(var(--black), <alpha-value>)",
                 "darker-primary": "rgba(var(--darker-primary), <alpha-value>)",
-                "white": "rgba(var(--white), <alpha-value>)",
+                white: "rgba(var(--white), <alpha-value>)",
                 "gray-1": "rgba(var(--gray-1), <alpha-value>)",
                 "gary-2": "rgba(var(--gray-2), <alpha-value>)",
                 "gray-3": "rgba(var(--gray-3), <alpha-value>)",
@@ -30,9 +30,9 @@ module.exports = {
             {
                 light: {
                     ...daisyuiThemes.light,
-                    "primary": "rgba(0,193,164,1)",
-                    "error": "rgba(254, 70, 87, 1)",
-                    "warning": "rgba(255, 186, 0, 1)",
+                    primary: "rgba(0,193,164,1)",
+                    error: "rgba(254, 70, 87, 1)",
+                    warning: "rgba(255, 186, 0, 1)",
                     "--darker-primary": "8, 112, 112",
                     "--black": "18, 44, 52",
                     "--white": "255, 255, 255",

@@ -1,4 +1,4 @@
-.base-button {
+/* .base-button {
     @apply bg-primary shadow-none text-white rounded-2xl hover:bg-darker-primary disabled:bg-primary disabled:opacity-70;
 }
 
@@ -13,4 +13,4 @@
 .base-button_none {
     @apply shadow-none outline-none bg-transparent text-black rounded-2xl hover:bg-gray-1/70 border-none !p-2 !min-h-8 disabled:opacity-70;
 }
-
+ */
